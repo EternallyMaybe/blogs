@@ -1,0 +1,58 @@
+{
+    "title": "Blogs",
+    "author": "Eternally <908624042@qq.com>",
+    "description": "This is a sample book created by gitbook",
+    "extension": null,
+    "generator": "site",
+    "styles": {
+        "website": "styles/website.css",
+        "ebook": "styles/ebook.css",
+        "pdf": "styles/pdf.css",
+        "mobi": "styles/mobi.css",
+        "epub": "styles/epub.css"
+    },
+    "links": {
+        "sharing": {
+            "all": null,
+            "facebook": null,
+            "google": null,
+            "twitter": null,
+            "weibo": null
+        }
+    },
+    "plugins": [
+        "-lunr",
+        "-search",
+        "search-pro",
+        "expandable-chapters-small",
+        "back-to-top-button",
+        "code",
+        "popup",
+        "github",
+        "page-copyright",
+        "splitter",
+        "insert-logo"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/EternallyMaybe"
+        },
+        "page-copyright": {
+            "description": "modified at",
+            "signature": "Eternally",
+            "wisdom": "Frontend Developer",
+            "format": "YYYY-MM-dd hh:mm:ss",
+            "copyright": "Copyright &#169; Eternally",
+            "isShowQRCode": false,
+            "timeColor": "#666",
+            "copyrightColor": "#666",
+            "utcOffset": "8",
+            "style": "normal",
+            "noPowered": true
+        },
+        "insert-logo": {
+            "url": "/src/images/gitbook-logo.jpg",
+            "style": "background: none; width: 100%;"
+        }
+    }
+}
