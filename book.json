@@ -23,36 +23,34 @@
     "plugins": [
         "-lunr",
         "-search",
+        "-sharing",
         "search-pro",
         "expandable-chapters-small",
         "back-to-top-button",
         "code",
         "popup",
         "github",
-        "page-copyright",
+        "tbfed-pagefooter",
         "splitter",
-        "insert-logo"
+        "insert-logo",
+        "page-toc-button"
     ],
     "pluginsConfig": {
         "github": {
             "url": "https://github.com/EternallyMaybe"
         },
-        "page-copyright": {
-            "description": "modified at",
-            "signature": "Eternally",
-            "wisdom": "Frontend Developer",
-            "format": "YYYY-MM-dd hh:mm:ss",
+        "tbfed-pagefooter": {
             "copyright": "Copyright &#169; Eternally",
-            "isShowQRCode": false,
-            "timeColor": "#666",
-            "copyrightColor": "#666",
-            "utcOffset": "8",
-            "style": "normal",
-            "noPowered": true
+            "modify_label": "modified at",
+            "modify_format": "YYYY-MM-DD hh:mm:ss"
         },
         "insert-logo": {
             "url": "/src/images/gitbook-logo.jpg",
             "style": "background: none; width: 100%;"
-        }
+        },
+        "page-toc-button": {
+            "maxTocDepth": 2,
+            "minTocSize": 2
+   		}
     }
 }

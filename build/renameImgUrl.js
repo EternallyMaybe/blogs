@@ -29,7 +29,9 @@ function modifyFile(filePath) {
     fs.readFile(filePath, (err, data) => {
         if (err) throw err;
         
-        let file = data.toString('UTF-8').replace(/(\/src\/images\/[\w_-]+?(?:\.(png|jpg|jpeg|svg|gif|bmp)))/ig, config.imageDirPrefix + '$1');
+        let file = data.toString('UTF-8')
+        .replace(/(\.\.\/)+(?=src\/images)/ig, '/')
+        .replace(/(\/src\/images\/[\/\w_-]+?(?:\.(png|jpg|jpeg|svg|gif|bmp)))/ig, config.imageDirPrefix + '$1');
         fs.writeFile(filePath, file, (err) => {
             if (err) throw err;
         })

@@ -74,7 +74,7 @@ Serving book on http://localhost:4000
 ```
 出现以上提示就表示服务已经启动成功，然后在浏览器输入http://localhost:4000 就可以看到效果了
 #### 项目部署到github pages
-首先了解一下[github pages](https://pages.github.com/),它是为你的项目提供一个==免费==的访问站点，并且直接指向你的github仓库，你的仓库更新，站点也自动更新。
+首先了解一下[github pages](https://pages.github.com/),它是为你的项目提供一个免费的访问站点，并且直接指向你的github仓库，你的仓库更新，站点也自动更新。
 
 紧接着我们把项目分成master、gh-pages两个分支，源码放在master分支上，要部署的网站放在gh-pages分支。
 具体操作:
@@ -98,6 +98,22 @@ _book
 #!/usr/bin/env sh
 echo '开始执行命令'
 
+# 是否安装node
+echo '检查是否安装node'
+if command -v node >/dev/null 2>&1; then
+    echo "Node exists"
+else 
+    echo "Node does not exist" && exit 0
+fi
+
+# 是否安装git
+echo '检查是否安装git'
+if command -v git >/dev/null 2>&1; then
+    echo "Git exists"
+else 
+    echo "Git does not exist" && exit 0
+fi
+
 # 生成静态文件
 echo '执行命令：gitbook build .'
 gitbook build .
@@ -105,6 +121,12 @@ gitbook build .
 # 进入生成的文件夹
 echo '执行命令：cd ./_book'
 cd ./_book
+
+# 重写图片路径
+echo '执行命令：node ./build/renameImgUrl'
+node ./build/renameImgUrl.js
+
+sleep 1
 
 # 初始化一个仓库，仅仅是做了一个初始化的操作，项目里的文件还没有被跟踪
 echo "执行命令：git init\n"

@@ -1,5 +1,21 @@
-#!/usr/bin/env sh
+#!/bin/bash
 echo '开始执行命令'
+
+# 是否安装node
+echo '检查是否安装node'
+if command -v node >/dev/null 2>&1; then
+    echo "Node exists"
+else 
+    echo "Node does not exist" && exit 0
+fi
+
+# 是否安装git
+echo '检查是否安装git'
+if command -v git >/dev/null 2>&1; then
+    echo "Git exists"
+else 
+    echo "Git does not exist" && exit 0
+fi
 
 # 生成静态文件
 echo '执行命令：gitbook build .'
@@ -24,8 +40,8 @@ echo "执行命令：git add ."
 git add .
 
 # 把修改的文件提交
-echo "执行命令：commit -m 'deploy'"
-git commit -m 'deploy'
+echo "执行命令：git commit -q -m 'deploy'"
+git commit -q -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 echo "执行命令：git push -f git@github.com:EternallyMaybe/blogs.git master:gh-pages"
