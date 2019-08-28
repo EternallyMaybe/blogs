@@ -1,0 +1,871 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>内存泄露 · Blogs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Eternally <908624042@qq.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="跨域.html" />
+    
+    
+    <link rel="prev" href="垃圾回收.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../前端新特性/">
+            
+                <a href="../前端新特性/">
+            
+                    
+                    前端新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../前端新特性/Notification.html">
+            
+                <a href="../前端新特性/Notification.html">
+            
+                    
+                    Notification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    基本知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="JavaScript的使用.html">
+            
+                <a href="JavaScript的使用.html">
+            
+                    
+                    JavaScript的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="js引擎原理.html">
+            
+                <a href="js引擎原理.html">
+            
+                    
+                    js引擎原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="this.html">
+            
+                <a href="this.html">
+            
+                    
+                    this
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="new原理.html">
+            
+                <a href="new原理.html">
+            
+                    
+                    new原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="json.html">
+            
+                <a href="json.html">
+            
+                    
+                    json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="jsonp.html">
+            
+                <a href="jsonp.html">
+            
+                    
+                    jsonp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="垃圾回收.html">
+            
+                <a href="垃圾回收.html">
+            
+                    
+                    垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2.8" data-path="内存泄露.html">
+            
+                <a href="内存泄露.html">
+            
+                    
+                    内存泄露
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.9" data-path="跨域.html">
+            
+                <a href="跨域.html">
+            
+                    
+                    跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.10" data-path="前端攻击方式.html">
+            
+                <a href="前端攻击方式.html">
+            
+                    
+                    前端攻击方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11" data-path="深度复制.html">
+            
+                <a href="深度复制.html">
+            
+                    
+                    深度复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.12" data-path="数组扁平化.html">
+            
+                <a href="数组扁平化.html">
+            
+                    
+                    数组扁平化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.13" data-path="沙箱模式.html">
+            
+                <a href="沙箱模式.html">
+            
+                    
+                    沙箱模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.14" data-path="设计模式.html">
+            
+                <a href="设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.15" data-path="查找算法.html">
+            
+                <a href="查找算法.html">
+            
+                    
+                    查找算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.16" data-path="算法.html">
+            
+                <a href="算法.html">
+            
+                    
+                    算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../css/">
+            
+                <a href="../../css/">
+            
+                    
+                    css
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../css/文本省略.html">
+            
+                <a href="../../css/文本省略.html">
+            
+                    
+                    文本省略
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../webpack/">
+            
+                <a href="../../webpack/">
+            
+                    
+                    webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../webpack/sourceMap.html">
+            
+                <a href="../../webpack/sourceMap.html">
+            
+                    
+                    sourceMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../vue/">
+            
+                <a href="../../vue/">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../vue/原理解析.html">
+            
+                <a href="../../vue/原理解析.html">
+            
+                    
+                    原理解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../vue/vue项目性能优化.html">
+            
+                <a href="../../vue/vue项目性能优化.html">
+            
+                    
+                    vue项目性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../node/">
+            
+                <a href="../../node/">
+            
+                    
+                    node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../node/NPM.html">
+            
+                <a href="../../node/NPM.html">
+            
+                    
+                    NPM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../其他/">
+            
+                <a href="../../其他/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../其他/webp.html">
+            
+                <a href="../../其他/webp.html">
+            
+                    
+                    webp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../其他/git项目流程.html">
+            
+                <a href="../../其他/git项目流程.html">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../其他/搜索引擎原理.html">
+            
+                <a href="../../其他/搜索引擎原理.html">
+            
+                    
+                    搜索引擎原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../其他/单点登录.html">
+            
+                <a href="../../其他/单点登录.html">
+            
+                    
+                    单点登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../其他/gitbook.html">
+            
+                <a href="../../其他/gitbook.html">
+            
+                    
+                    搭建gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../其他/文章推荐.html">
+            
+                <a href="../../其他/文章推荐.html">
+            
+                    
+                    文章推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >内存泄露</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x4EC0;&#x4E48;&#x662F;&#x5185;&#x5B58;&#x6CC4;&#x9732;">&#x4EC0;&#x4E48;&#x662F;&#x5185;&#x5B58;&#x6CC4;&#x9732;</h2>
+<p>&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x662F;&#x6307;&#x4E00;&#x5757;&#x88AB;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x65E2;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#xFF0C;&#x53C8;&#x4E0D;&#x80FD;&#x56DE;&#x6536;&#xFF0C;&#x76F4;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;&#x3002;&#x5728;C++&#x4E2D;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x624B;&#x52A8;&#x7BA1;&#x7406;&#x5185;&#x5B58;&#xFF0C;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x662F;&#x7ECF;&#x5E38;&#x51FA;&#x73B0;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x800C;&#x73B0;&#x5728;&#x6D41;&#x884C;&#x7684;C#&#x548C;Java&#x7B49;&#x8BED;&#x8A00;&#x91C7;&#x7528;&#x4E86;&#x81EA;&#x52A8;&#x5783;&#x573E;&#x56DE;&#x6536;&#x65B9;&#x6CD5;&#x7BA1;&#x7406;&#x5185;&#x5B58;&#xFF0C;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x51E0;&#x4E4E;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x3002;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x4E5F;&#x662F;&#x91C7;&#x7528;&#x81EA;&#x52A8;&#x5783;&#x573E;&#x56DE;&#x6536;&#x65B9;&#x6CD5;&#x7BA1;&#x7406;&#x5185;&#x5B58;&#xFF0C;&#x4F46;&#x7531;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x5783;&#x573E;&#x56DE;&#x6536;&#x65B9;&#x6CD5;&#x6709;bug&#xFF0C;&#x4F1A;&#x4EA7;&#x751F;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x3002;</p>
+<h2 id="&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x7684;&#x51E0;&#x79CD;&#x60C5;&#x51B5;">&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x7684;&#x51E0;&#x79CD;&#x60C5;&#x51B5;</h2>
+<h4 id="1-&#x5F53;&#x9875;&#x9762;&#x4E2D;&#x5143;&#x7D20;&#x88AB;&#x79FB;&#x9664;&#x6216;&#x66FF;&#x6362;&#x65F6;&#xFF0C;&#x82E5;&#x5143;&#x7D20;&#x7ED1;&#x5B9A;&#x7684;&#x4E8B;&#x4EF6;&#x4ECD;&#x6CA1;&#x88AB;&#x79FB;&#x9664;&#xFF0C;&#x5728;ie&#x4E2D;&#x4E0D;&#x4F1A;&#x4F5C;&#x51FA;&#x6070;&#x5F53;&#x5904;&#x7406;&#xFF0C;&#x6B64;&#x65F6;&#x8981;&#x5148;&#x624B;&#x5DE5;&#x79FB;&#x9664;&#x4E8B;&#x4EF6;&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x3002;">1. &#x5F53;&#x9875;&#x9762;&#x4E2D;&#x5143;&#x7D20;&#x88AB;&#x79FB;&#x9664;&#x6216;&#x66FF;&#x6362;&#x65F6;&#xFF0C;&#x82E5;&#x5143;&#x7D20;&#x7ED1;&#x5B9A;&#x7684;&#x4E8B;&#x4EF6;&#x4ECD;&#x6CA1;&#x88AB;&#x79FB;&#x9664;&#xFF0C;&#x5728;IE&#x4E2D;&#x4E0D;&#x4F1A;&#x4F5C;&#x51FA;&#x6070;&#x5F53;&#x5904;&#x7406;&#xFF0C;&#x6B64;&#x65F6;&#x8981;&#x5148;&#x624B;&#x5DE5;&#x79FB;&#x9664;&#x4E8B;&#x4EF6;&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x3002;</h4>
+<pre><code>&lt;div id=&quot;myDiv&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;Click me&quot; id=&quot;myBtn&quot;&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var btn = document.getElementById(&quot;myBtn&quot;);
+    btn.onclick = function(){
+        document.getElementById(&quot;myDiv&quot;).innerHTML = &quot;Processing...&quot;;
+    }
+&lt;/script&gt;
+</code></pre><p>&#x5E94;&#x6539;&#x6210;&#x4E0B;&#x9762;</p>
+<pre><code>&lt;div id=&quot;myDiv&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;Click me&quot; id=&quot;myBtn&quot;&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var btn = document.getElementById(&quot;myBtn&quot;);
+    btn.onclick = function(){
+        btn.onclick = null;
+        document.getElementById(&quot;myDiv&quot;).innerHTML = &quot;Processing...&quot;;
+    }
+&lt;/script&gt;
+</code></pre><p>&#x6216;&#x8005;&#x91C7;&#x7528;&#x4E8B;&#x4EF6;&#x59D4;&#x6258;</p>
+<pre><code>&lt;div id=&quot;myDiv&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;Click me&quot; id=&quot;myBtn&quot;&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    document.onclick = function(event){
+        event = event || window.event;
+        if(event.target.id == &quot;myBtn&quot;){
+            document.getElementById(&quot;myDiv&quot;).innerHTML = &quot;Processing...&quot;;
+        }
+    }
+&lt;/script&gt;
+</code></pre><h4 id="2">2.</h4>
+<p>var a=document.getElementById(&quot;xx&quot;);
+var b=document.getElementById(&quot;xxx&quot;);
+a.r=b;
+b.r=a;</p>
+<p>var a=document.getElementById(&quot;xx&quot;);
+a.r=a;</p>
+<p>&#x5BF9;&#x4E8E;&#x7EAF;&#x7CB9;&#x7684; ECMAScript &#x5BF9;&#x8C61;&#x800C;&#x8A00;&#xFF0C;&#x53EA;&#x8981;&#x6CA1;&#x6709;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#x5F15;&#x7528;&#x5BF9;&#x8C61; a&#x3001;b&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5B83;&#x4EEC;&#x53EA;&#x662F;&#x76F8;&#x4E92;&#x4E4B;&#x95F4;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x90A3;&#x4E48;&#x4ECD;&#x7136;&#x4F1A;&#x88AB;&#x5783;&#x573E;&#x6536;&#x96C6;&#x7CFB;&#x7EDF;&#x8BC6;&#x522B;&#x5E76;&#x5904;&#x7406;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5728; Internet Explorer &#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x662F; DOM &#x8282;&#x70B9;&#x6216;&#x8005; ActiveX &#x5BF9;&#x8C61;&#xFF0C;&#x5783;&#x573E;&#x6536;&#x96C6;&#x7CFB;&#x7EDF;&#x5219;&#x4E0D;&#x4F1A;&#x53D1;&#x73B0;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x7684;&#x5FAA;&#x73AF;&#x5173;&#x7CFB;&#x4E0E;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#x662F;&#x9694;&#x79BB;&#x7684;&#x5E76;&#x91CA;&#x653E;&#x5B83;&#x4EEC;&#x3002;&#x6700;&#x7EC8;&#x5B83;&#x4EEC;&#x5C06;&#x88AB;&#x4FDD;&#x7559;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x76F4;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x5173;&#x95ED;&#x3002;</p>
+<h4 id="3">3.</h4>
+<pre><code>function bindEvent() { 
+    var obj=document.createElement(&quot;XXX&quot;); 
+    obj.onclick=function(){ 
+        //Even if it&apos;s a empty function 
+    } 
+}
+</code></pre><p>&#x95ED;&#x5305;&#x53EF;&#x4EE5;&#x7EF4;&#x6301;&#x51FD;&#x6570;&#x5185;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;&#x4F7F;&#x5176;&#x5F97;&#x4E0D;&#x5230;&#x91CA;&#x653E;&#x3002;&#x4E0A;&#x4F8B;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#x65F6;&#xFF0C;&#x7531;&#x4E8E;&#x662F;&#x51FD;&#x6570;&#x5185;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x5185;&#x90E8;&#x51FD;&#x6570;--&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#x7684;&#x5F15;&#x7528;&#x5916;&#x66B4;&#x4E86;&#xFF0C;&#x5F62;&#x6210;&#x4E86;&#x95ED;&#x5305;&#x89E3;&#x51B3;&#x4E4B;&#x9053;&#xFF0C;&#x5C06;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x5728;&#x5916;&#x90E8;&#xFF0C;&#x89E3;&#x9664;&#x95ED;&#x5305;</p>
+<pre><code>function bindEvent() { 
+    var obj=document.createElement(&quot;XXX&quot;); 
+    obj.onclick=onclickHandler; 
+} 
+function onclickHandler(){ 
+    //do something 
+}
+</code></pre><p>&#x6216;&#x8005;&#x5728;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x7684;&#x5916;&#x90E8;&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x5220;&#x9664;&#x5BF9;dom&#x7684;&#x5F15;&#x7528;&#xFF08;&#x9898;&#x5916;&#xFF0C;&#x300A;JavaScript&#x6743;&#x5A01;&#x6307;&#x5357;&#x300B;&#x4E2D;&#x4ECB;&#x7ECD;&#x8FC7;&#xFF0C;&#x95ED;&#x5305;&#x4E2D;&#xFF0C;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x6CA1;&#x7528;&#x7684;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#xFF0C;&#x4EE5;&#x51CF;&#x5C11;&#x5185;&#x5B58;&#x6D88;&#x8017;&#x3002;&#xFF09;</p>
+<pre><code>function bindEvent() { 
+    var obj=document.createElement(&quot;XXX&quot;); 
+    obj.onclick=function(){ 
+        //Even if it&apos;s a empty function 
+    } 
+    obj=null; 
+}
+</code></pre><h4 id="4">4.</h4>
+<pre><code>a = {p: {x: 1}};
+b = a.p;
+delete a.p;
+</code></pre><p>&#x6267;&#x884C;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x4E4B;&#x540E;b.x&#x7684;&#x503C;&#x4F9D;&#x7136;&#x662F;1.&#x7531;&#x4E8E;&#x5DF2;&#x7ECF;&#x5220;&#x9664;&#x7684;&#x5C5E;&#x6027;&#x5F15;&#x7528;&#x4F9D;&#x7136;&#x5B58;&#x5728;&#xFF0C;&#x56E0;&#x6B64;&#x5728;JavaScript&#x7684;&#x67D0;&#x4E9B;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x56E0;&#x4E3A;&#x8FD9;&#x79CD;&#x4E0D;&#x4E25;&#x8C28;&#x7684;&#x4EE3;&#x7801;&#x800C;&#x9020;&#x6210;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x3002;&#x6240;&#x4EE5;&#x5728;&#x9500;&#x6BC1;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8981;&#x904D;&#x5386;&#x5C5E;&#x6027;&#x4E2D;&#x5C5E;&#x6027;&#xFF0C;&#x4F9D;&#x6B21;&#x5220;&#x9664;&#x3002;</p>
+<h4 id="5-&#x81EA;&#x52A8;&#x7C7B;&#x578B;&#x88C5;&#x7BB1;&#x8F6C;&#x6362;">5. &#x81EA;&#x52A8;&#x7C7B;&#x578B;&#x88C5;&#x7BB1;&#x8F6C;&#x6362;</h4>
+<p>&#x770B;&#x7F51;&#x4E0A;&#x8D44;&#x6599;&#xFF0C;&#x8BF4;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5728;ie&#x7CFB;&#x5217;&#x4E2D;&#x4F1A;&#x5BFC;&#x81F4;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#xFF0C;&#x5148;&#x63D0;&#x4E2A;&#x795E;&#xFF0C;&#x5177;&#x4F53;&#x6CC4;&#x9732;&#x4E0E;&#x5426;&#x5148;&#x4E0D;&#x7BA1;</p>
+<pre><code>var s = &quot;lalala&quot;;
+alert(s.length);
+</code></pre><p>s&#x672C;&#x8EAB;&#x662F;&#x4E00;&#x4E2A;string&#x800C;&#x975E;object&#xFF0C;&#x5B83;&#x6CA1;&#x6709;length&#x5C5E;&#x6027;&#xFF0C;&#x6240;&#x4EE5;&#x5F53;&#x8BBF;&#x95EE;length&#x65F6;&#xFF0C;JS&#x5F15;&#x64CE;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;String&#x5BF9;&#x8C61;&#x5C01;&#x88C5;s&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E00;&#x5B9A;&#x4F1A;&#x6CC4;&#x9732;&#x3002;&#x8FD9;&#x4E2A;bug&#x532A;&#x5937;&#x6240;&#x601D;&#xFF0C;&#x6240;&#x5E78;&#x89E3;&#x51B3;&#x8D77;&#x6765;&#x76F8;&#x5F53;&#x5BB9;&#x6613;&#xFF0C;&#x8BB0;&#x5F97;&#x6240;&#x6709;&#x503C;&#x7C7B;&#x578B;&#x505A;.&#x8FD0;&#x7B97;&#x4E4B;&#x524D;&#x5148;&#x663E;&#x5F0F;&#x8F6C;&#x6362;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre><code>var s=&quot;lalala&quot;;
+alert(new String(s).length);
+</code></pre><h4 id="6&#x67D0;&#x4E9B;dom&#x64CD;&#x4F5C;">6.&#x67D0;&#x4E9B;DOM&#x64CD;&#x4F5C;</h4>
+<p>IE&#x7CFB;&#x5217;&#x7684;&#x7279;&#x6709;&#x95EE;&#x9898; &#x7B80;&#x5355;&#x7684;&#x6765;&#x8BF4;&#x5C31;&#x662F;&#x5728;&#x5411;&#x4E0D;&#x5728;DOM&#x6811;&#x4E0A;&#x7684;DOM&#x5143;&#x7D20;appendChild&#xFF1B;IE7&#x4E2D;&#xFF0C;&#x8C8C;&#x4F3C;&#x4E3A;&#x4E86;&#x6539;&#x5584;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#xFF0C;IE7&#x91C7;&#x7528;&#x4E86;&#x6781;&#x7AEF;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;&#x79BB;&#x5F00;&#x9875;&#x9762;&#x65F6;&#x56DE;&#x6536;&#x6240;&#x6709;DOM&#x6811;&#x4E0A;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5176;&#x5B83;&#x4E00;&#x6982;&#x4E0D;&#x7BA1;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Eternally all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">modified at
+2019-07-22 06:19:05
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="垃圾回收.html" class="navigation navigation-prev " aria-label="Previous page: 垃圾回收">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="跨域.html" class="navigation navigation-next " aria-label="Next page: 跨域">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"内存泄露","level":"1.2.2.8","depth":3,"next":{"title":"跨域","level":"1.2.2.9","depth":3,"path":"doc/JavaScript/基本知识/跨域.md","ref":"doc/JavaScript/基本知识/跨域.md","articles":[]},"previous":{"title":"垃圾回收","level":"1.2.2.7","depth":3,"path":"doc/JavaScript/基本知识/垃圾回收.md","ref":"doc/JavaScript/基本知识/垃圾回收.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","expandable-chapters-small","back-to-top-button","code","popup","github","tbfed-pagefooter","splitter","insert-logo","page-toc-button"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &#169; Eternally","modify_label":"modified at","modify_format":"YYYY-MM-DD hh:mm:ss"},"github":{"url":"https://github.com/EternallyMaybe"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; width: 100%;","url":"/blogs/src/images/gitbook-logo.jpg"}},"theme":"default","author":"Eternally <908624042@qq.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blogs","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"doc/JavaScript/基本知识/内存泄露.md","mtime":"2019-07-22T10:19:05.618Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-28T06:43:06.377Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
